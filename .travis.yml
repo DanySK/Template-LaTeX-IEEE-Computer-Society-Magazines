@@ -1,5 +1,8 @@
 official-repo: &official-repo
   DanySK/Template-LaTeX-CI
+github_api_key: &github_api_key
+  secure: Hhgw0GUY1z9CIzRV2g2IPqu/m1Eh5i+Xmov1RY7O9JnPPYnX4ziQ5el46FAQ2hZT3r77hK7GlJGRGMuuD3xK1SlJtjvyb/EXLE9T6ChVSPEMRBVPm/tpJgM9Cq7dR9ES60YFDtcD70zW/qvrcTcRiM53NgKnD+SJGI9JCMzq6QMXrDmPxV+iV7vgxDdFDlb7YMO1Aq4x+R64obJY6m3VbJeuC458maUwCs92pz7A/wpAjNYB8OATo05DVwSYse364JOhiQrzo4JUq0VdGugVOiJELiRDrSGSoXGDOa/jebmbUEDOEt2+FncEsJL5Qn8UfKTONrt30/qRTFkxaZrZcY7kPXy4nvYDIk3DT8d7nOq627tcFr1lbezvhOm2HOT15ENj5SoU88S4yudmJKsaDd9znZOIcGRhEiO6NAmK5HU3Do5EAkmmMnlSBKjRJpniQNs3CQXW+yDC4Flvr0I6Mr2leT6QAZlvawMBrgBJ6Sl1ItPv3sViE918PG2/1uIWmiFkCwf+5f6Dy5B8K0sPEZRBzRZA9IMMk2n/QDKuD/qqypraAlBHjdWmZjeRHE/EPVThOEwlr6DhIWuciviO+T2HX6ksoYMHdZo1glgx8jbG4ioUT45fcvZiUoJIl/DOt99jfKtjt2mfgJJaU9vwBesiBo96fkCPHFx7Nv97L1U=
+
 language: java
 addons:
   apt:
@@ -42,8 +45,7 @@ cache:
     - $HOME/.gradle/wrapper/
 deploy:
   - provider: releases
-    api_key:
-      secure: NMxb33l3KDAVQ+2cTbE1HQA9J54ljry4Q6+yZiFPYAtPgAihYbf29q+o/4bfNh1YbatDFf9lbPwWCT7JmFPa/7IbvZjFr6UOHr+nSybOS96IrbujTfF7yvbzed4SfwgiZX1ufLuluNcb2TU1dmsBHthVRCw+eCnKZN9B5DWvGz2g3PKLHAp5RSWsu/BsE+TbIQSiwdG7p/v/Ag5P8BIQlPviCPEllIyzMcMWrdctYRMJuoRro3U+paq3C3Qw8RWzb7cDVKkyIThsh0iTLMNkU4gSQZTIcaS8zG+e5yo/uFBycGXfsh4KYdGkTNdSif17Hi4jK8PxgjHzQUbw9dhSFqzhu6D+2bnzdcFKd3b8gtgFpf5r8JrTBwDx4B01YaaGdM90uEOI3mkgTTh2ycDM2zYkk3od9nEsRS9tlpUPcK0cNl++oPMHIueM/RonRNo8kPI70AMKShN6wg+IJjdHZimeAaMysQg4Scqolb1Wh/cd+yqu2H5l+h90pRt6qI0+0wqGZvQ950UBDTjhSuo+wSkvYyc/ZTrf50kdWBfn5N8wayDDnMA6qgFhgr6pHbFJY3arv4FTOPTvKjGQfrhFpIwHYuaVCTzrSfTTDCTElc2vVlDePbq4f4kfqvmN/SMTmHCSIdjSMFjB9ft5Mptd54C8qz90Zi3NhwNzUfxDZfs=
+    api_key: *github_api_key
     file_glob: true
     file: "*.pdf"
     skip_cleanup: true
@@ -51,8 +53,7 @@ deploy:
       repo: *official-repo
       tags: true
   - provider: releases
-    api_key:
-      secure: NMxb33l3KDAVQ+2cTbE1HQA9J54ljry4Q6+yZiFPYAtPgAihYbf29q+o/4bfNh1YbatDFf9lbPwWCT7JmFPa/7IbvZjFr6UOHr+nSybOS96IrbujTfF7yvbzed4SfwgiZX1ufLuluNcb2TU1dmsBHthVRCw+eCnKZN9B5DWvGz2g3PKLHAp5RSWsu/BsE+TbIQSiwdG7p/v/Ag5P8BIQlPviCPEllIyzMcMWrdctYRMJuoRro3U+paq3C3Qw8RWzb7cDVKkyIThsh0iTLMNkU4gSQZTIcaS8zG+e5yo/uFBycGXfsh4KYdGkTNdSif17Hi4jK8PxgjHzQUbw9dhSFqzhu6D+2bnzdcFKd3b8gtgFpf5r8JrTBwDx4B01YaaGdM90uEOI3mkgTTh2ycDM2zYkk3od9nEsRS9tlpUPcK0cNl++oPMHIueM/RonRNo8kPI70AMKShN6wg+IJjdHZimeAaMysQg4Scqolb1Wh/cd+yqu2H5l+h90pRt6qI0+0wqGZvQ950UBDTjhSuo+wSkvYyc/ZTrf50kdWBfn5N8wayDDnMA6qgFhgr6pHbFJY3arv4FTOPTvKjGQfrhFpIwHYuaVCTzrSfTTDCTElc2vVlDePbq4f4kfqvmN/SMTmHCSIdjSMFjB9ft5Mptd54C8qz90Zi3NhwNzUfxDZfs=
+    api_key: *github_api_key
     file_glob: true
     file: "*.pdf"
     skip_cleanup: true
