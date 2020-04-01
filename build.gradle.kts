@@ -3,5 +3,7 @@ plugins {
 }
 
 latex {
-    "CsMag_template"()
+    "CsMag_template"() {
+        bib = "bibliography.bib"
+    }
 }
