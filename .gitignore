@@ -11,3 +11,4 @@ latex.pdf
 .gradle/
 *.kate-swp
 CsMag_template.pdf
+build/
