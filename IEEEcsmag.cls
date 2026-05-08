@@ -1,4 +1,18 @@
-% =====================================================================
+%% =====================================================================
+%% IEEEcsmag.cls 2021/05/06 version V2.0
+%%
+%% IEEE CS Mag document class file for LaTeX2e
+%%
+%% Copyright (C) IEEE CS Mag
+%% for LaTeX version 2.0, by Aptara, India
+%% 
+%% IEEEcsmag.cls is based on IEEEtran.cls version V1.7a.
+%%
+%% IEEEcsmag.cls is created to match the design layout of 
+%% IEEE CS Mag.
+%%
+%% =====================================================================
+%% =====================================================================
 %% IEEEcsmag.cls 2019/07/27 version V1.0
 %%
 %% IEEE CS Mag document class file for LaTeX2e
@@ -137,7 +151,7 @@
 %    IEEEtran will automatically set the default paper size under pdflatex 
 %    (without requiring a change to pdftex.cfg), so this issue is more
 %    important to dvips users. Fix config.ps, config.pdf, or ~/.dvipsrc for
-%    dvips, or use the dvips -t papersize option instead as needed. See the
+%    dvips, or use the dvips -t papersize option instead as needed. See thx1e
 %    testflow documentation
 %    http://www.ctan.org/tex-archive/macros/latex/contrib/IEEEtran/testflow
 %    for more details on dvips paper size configuration.
@@ -204,8 +218,8 @@
 
 
 
-\ProvidesClass{IEEEphot}[2009/06/23 V1.2]
-\typeout{-- See the "IEEEphot_HOWTO" manual for usage information.}
+\ProvidesClass{IEEEcsmag}[2009/06/23 V1.2]
+\typeout{-- See the "IEEECsMag_HOWTO" manual for usage information.}
 \NeedsTeXFormat{LaTeX2e}
 
 % IEEEtran.cls version numbers, provided as of V1.3
@@ -366,9 +380,10 @@
 % IEEE uses Times Roman font, so we'll default to Times.
 % These three commands make up the entire times.sty package.
 \renewcommand{\sfdefault}{phv}
-\renewcommand{\rmdefault}{ptm}
+\renewcommand{\rmdefault}{phv}
 \renewcommand{\ttdefault}{pcr}
-
+\usepackage{sfmath}
+%\usepackage{mathtime}
 \@IEEEcompsoconly{\typeout{-- Using IEEE Computer Society mode.}}
 
 % V1.7 compsoc nonconference papers, use Palatino/Palladio as the main text font,
@@ -478,15 +493,15 @@
 
 \ifx\CLASSOPTIONpt\@IEEEptsizenine
 \typeout{-- This is a 9 point document.}
-\def\normalsize{\@setfontsize{\normalsize}{9}{11.0476pt}}%
-\setlength{\@IEEEnormalsizeunitybaselineskip}{11.0476pt}%
+\def\normalsize{\@setfontsize{\normalsize}{9}{12}}%
+\setlength{\@IEEEnormalsizeunitybaselineskip}{12}%
 \normalsize
 \abovedisplayskip 1ex plus3pt minus1pt%
 \belowdisplayskip \abovedisplayskip%
 \abovedisplayshortskip 0pt plus3pt%
 \belowdisplayshortskip 1ex plus3pt minus1pt
 \def\small{\@setfontsize{\small}{8}{10pt}}
-\def\footnotesize{\@setfontsize{\footnotesize}{8}{9pt}}
+\def\footnotesize{\@setfontsize{\footnotesize}{8}{10pt}}
 \def\scriptsize{\@setfontsize{\scriptsize}{7}{8pt}}
 \def\tiny{\@setfontsize{\tiny}{5}{6pt}}
 % sublargesize is the same as large - 10pt
@@ -502,15 +517,15 @@
 % Check if we have selected 10 points
 \ifx\CLASSOPTIONpt\@IEEEptsizeten
 \typeout{-- This is a 10 point document.}
-\def\normalsize{\@setfontsize{\normalsize}{10.5bp}{13bp}}%
-\setlength{\@IEEEnormalsizeunitybaselineskip}{13pt}%
+\def\normalsize{\@setfontsize{\normalsize}{9bp}{12bp}}%
+\setlength{\@IEEEnormalsizeunitybaselineskip}{12pt}%
 \normalsize
 \abovedisplayskip 1.5ex plus4pt minus2pt%
 \belowdisplayskip \abovedisplayskip%
 \abovedisplayshortskip 0pt plus4pt%
 \belowdisplayshortskip 1.5ex plus4pt minus2pt
 \def\small{\@setfontsize{\small}{8.5}{10pt}}
-\def\footnotesize{\@setfontsize{\footnotesize}{8}{9pt}}
+\def\footnotesize{\@setfontsize{\footnotesize}{8}{10pt}}
 \def\scriptsize{\@setfontsize{\scriptsize}{7}{8pt}}
 \def\tiny{\@setfontsize{\tiny}{5}{6pt}}
 % sublargesize is a tad smaller than large - 11pt
@@ -534,7 +549,7 @@
 \abovedisplayshortskip 0pt plus5pt%
 \belowdisplayshortskip 1.5ex plus5pt minus3pt
 \def\small{\@setfontsize{\small}{10}{12pt}}
-\def\footnotesize{\@setfontsize{\footnotesize}{9}{10.5pt}}
+\def\footnotesize{\@setfontsize{\footnotesize}{8}{10pt}}
 \def\scriptsize{\@setfontsize{\scriptsize}{8}{9pt}}
 \def\tiny{\@setfontsize{\tiny}{6}{7pt}}
 % sublargesize is the same as large - 12pt
@@ -558,7 +573,7 @@
 \abovedisplayshortskip 0pt plus6pt%
 \belowdisplayshortskip 1.5ex plus6pt minus4pt
 \def\small{\@setfontsize{\small}{10}{12pt}}
-\def\footnotesize{\@setfontsize{\footnotesize}{9}{10.5pt}}
+\def\footnotesize{\@setfontsize{\footnotesize}{8}{10pt}}
 \def\scriptsize{\@setfontsize{\scriptsize}{8}{9pt}}
 \def\tiny{\@setfontsize{\tiny}{6}{7pt}}
 % sublargesize is the same as large - 14pt
@@ -776,7 +791,7 @@
 
 % The distance from the lower edge of the text body to the
 % footline
-\footskip 42pt%%%0.4in%24pt%in
+\footskip 24pt%%%0.4in%24pt%in
 
 % normally zero, should be relative to font height.
 % put in a little rubber to help stop some bad breaks (underfull vboxes)
@@ -801,7 +816,7 @@
 \ifx\CLASSOPTIONpt\@IEEEptsizetwelve\textheight=50\@IEEEnormalsizeunitybaselineskip\fi    % 50 lines/page
 
 
-\columnsep         15pt
+\columnsep         18pt
 \textwidth        44pc   % 2 x 19pc + 2pc = 40pc
  
 
@@ -1083,7 +1098,7 @@
 % which one you like in your document using a command such as:
 % setlength{\IEEEilabelindent}{\IEEEilabelindentB}
 \newdimen\IEEEilabelindentA
-\IEEEilabelindentA 0pt%\parindent
+\IEEEilabelindentA 15pt%\parindent
 
 \newdimen\IEEEilabelindentB
 \IEEEilabelindentB 1.3\parindent
@@ -1504,7 +1519,7 @@
 %\skip\footins 10pt plus 4pt minus 2pt
 % V1.6 respond to changes in font size
 % space added above the footnotes (if present)
-\skip\footins 0.9\baselineskip  plus 0.4\baselineskip  minus 0.2\baselineskip
+\skip\footins 2\baselineskip  plus 0.4\baselineskip  minus 0.2\baselineskip
 
 % V1.6, we need to make \footnotesep responsive to changes
 % in \baselineskip or strange spacings will result when in
@@ -1552,7 +1567,12 @@
 \relax
 \fi}
 \fi
-
+%%
+\def\footnoterule{\relax%
+\kern-5pt
+\hbox to \columnwidth{\vrule width\columnwidth height 1pt\hfill}
+\kern4.6pt
+}
 % V1.6 do not allow LaTeX to break a footnote across multiple pages
 \interfootnotelinepenalty=10000
 
@@ -1645,8 +1665,8 @@
 \def\listtablename{List of Tables}
 \def\refname{REFERENCES}
 \def\indexname{Index}
-\def\figurename{Figure}
-\def\tablename{Table}
+\def\figurename{FIGURE}
+\def\tablename{TABLE}
 \@IEEEcompsocconfonly{\def\figurename{Figure}\def\tablename{Table}}
 \def\partname{Part}
 \def\appendixname{Appendix}
@@ -1801,7 +1821,7 @@
 \setbox\@tempboxa\hbox{\normalfont\footnotesize {#1.}\enspace#2}% TB FIG
 % if caption is longer than a line, let it wrap around
 \vspace*{2pt}%
-{{\figcapnumfont#1.}\space{\figcapfont#2\par}}%TB FIG
+{{\figcapnumfont#1.}\space{\figcapfont#2\par}\vspace*{-4pt}\FloatSep}%TB FIG
 %
 % if caption is shorter than a line, center if conference, left justify otherwise
 \fi}
@@ -1829,7 +1849,7 @@
 \def\fps@figure{tbp}
 \def\ftype@figure{1}
 \def\ext@figure{lof}
-\def\fnum@figure{\figurename~\thefigure}
+\def\fnum@figure{\textcolor{bgcolor}{\figurename~\thefigure}}
 \def\figure{\@float{figure}}
 \def\endfigure{\end@float}
 %%
@@ -1852,7 +1872,7 @@
 \def\fps@table{tbp}
 \def\ftype@table{2}
 \def\ext@table{lot}
-\def\fnum@table{\tablename~\thetable}
+\def\fnum@table{\textcolor{bgcolor}{\tablename~\thetable}}
 % V1.6 IEEE uses 8pt text for tables
 % to default to footnotesize, we hack into LaTeX2e's \@floatboxreset and pray
 
@@ -2946,11 +2966,12 @@ between column types.}%
 %%
 % set up the running headings, this complex because of all the different
 % modes IEEEtran supports 
+\def\RunBar{\lower6pt\hbox{\textcolor{syellowcolor}{\vrule width52pt height18pt depth0pt}}}
 \def\ps@headings{%
-   \def\@evenhead{{\rhfont\leftmark}\hfill}%
-   \def\@oddhead{}%\hfill{\rhfont\rightmark}}%
-       \def\@oddfoot{{\rfxfont\bfseries \@jmonth\ \@pubyear}\hfill\rlap{\hbox to 60pt{\hspace*{1.5pc}\vbox to 5pt{\hsize60pt\foliofont\thepage\hfill}\hfill}}}%
-        \def\@evenfoot{\llap{\hbox to 60pt{\hfill\vbox to 5pt{\hsize60pt\hfill\foliofont\thepage\hspace*{1.5pc}}}}\hfill{{\rfxfont\bfseries \@jname}}}%
+   \def\@evenhead{{\rhfont\hspace*{-30pt}\llap{\RunBar}\hspace*{4pt}\textcolor{gray40}{\leftmark}}\hfill}%
+   \def\@oddhead{\hfill{\rhfont\textcolor{gray40}{\rightmark}}\hspace*{4pt}\rlap{\RunBar}\hspace*{-30pt}}%
+       \def\@oddfoot{{\rfxfont\@jmonth\ \@pubyear}\hfill{{\rfxfont\@jtitle}}\hspace*{4pc}\rlap{\hbox to 60pt{\hspace*{1.5pc}\vbox to 5pt{\hsize60pt\foliofont\thepage\hfill}\hfill}}}%
+        \def\@evenfoot{\llap{\hbox to 60pt{\hfill\vbox to 5pt{\hsize60pt\hfill\foliofont\thepage\hspace*{1.5pc}}}}\hspace*{4pc}{{\rfxfont\@jtitle}}\hfill{\rfxfont\@jmonth\ \@pubyear}}%
 	          }%
 	          %
 % title page style
@@ -2986,14 +3007,16 @@ between column types.}%
       \fi
    \fi
 \fi}
-
+%%%%
+\newlength\mkthtt
+\def\PageOpenTop{\hbox to 0pt{\hspace*{-79.5pt}\vbox to 0pt{\vspace*{-42pt}\ifx\@mktht\@empty\color{bgcolor}{\vrule width8.5in height30pt depth0pt}\else\mkthtt\@mktht\advance\mkthtt12.5pt\color{bgcolor}{\vrule width8.5in height\mkthtt depth0pt}\fi}}}
 %%%%%%%%%%%%%%%%
 \def\ps@plain{%
    \def\@oddfoot{}%
-   \let\@evenhead\@empty%
-   \let\@oddhead\@empty%
-        \def\@oddfoot{{\rfxfont\bfseries \@jname}\hphantom{\rffont\copyright\ \@pubyear\ IEEE}\hfill{\rffont Published by the IEEE Computer Society}\hfill\hphantom{{\rfxfont\bfseries \@jname}}{\rffont\copyright\ \@pubyear\ IEEE}\rlap{\hbox to 60pt{\hspace*{1.5pc}\vbox to 5pt{\hsize60pt\foliofont\thepage\hfill}\hfill}}}%
-        \def\@evenfoot{\llap{\hbox to 60pt{\hfill\vbox to 5pt{\hsize60pt\hfill\foliofont\thepage\hspace*{1.5pc}}}}{\rffont\copyright\ \@pubyear\ IEEE}\hphantom{\rfxfont\bfseries \@jname}\hfill{\rffont Published by the IEEE Computer Society}\hfill\hphantom{\rffont\copyright\ \@pubyear\ IEEE}{{\rfxfont\bfseries \@jname}}}%
+   \def\@evenhead{\PageOpenTop}%
+   \def\@oddhead{\PageOpenTop}%
+        \def\@oddfoot{{\rfxfont\@jmonth}\hfill{\rfxfont Published by the IEEE Computer Society}\hfill{\rfxfont\@jname}\hfill\rlap{\hbox to 60pt{\hspace*{1.5pc}\vbox to 5pt{\hsize60pt\foliofont\thepage\hfill}\hfill}}}%
+        \def\@evenfoot{\llap{\hbox to 60pt{\hfill\vbox to 5pt{\hsize60pt\hfill\foliofont\thepage\hspace*{1.5pc}}}}\hfill{\rfxfont\@jname}\hfill{\rfxfont Published by the IEEE Computer Society}\hfill{{\rfxfont\@jmonth}}}%
 	          }%
 %%%%%%%%%%%%%%%
 % start with empty headings
@@ -3106,7 +3129,7 @@ between column types.}%
 \def\ackrule{\par\noindent\rule{\textwidth}{.5pt}\par}
 
 \def\thebibliography#1{%
-    \section*{\bibsectionfont{\vrule width9pt height9pt depth0pt}\ \refname}%
+    \section{\refname}%
     \addcontentsline{toc}{section}{\refname}%
     % V1.6 add some rubber space here and provide a command trigger
     \bibliofont\let\it\itshape\vskip 0.2\baselineskip plus 0.1\baselineskip minus 0.1\baselineskip%
@@ -3115,7 +3138,8 @@ between column types.}%
      \labelsep5pt%
     \leftmargin\labelwidth
     \advance\leftmargin\labelsep\relax
-    %\itemindent10pt%
+    \advance\leftmargin15pt\relax
+    %\itemindent15pt%
     \itemsep\IEEEbibitemsep\relax
     \usecounter{enumiv}%
     \let\p@enumiv\@empty
@@ -3352,6 +3376,8 @@ between column types.}%
 \def\@IEEEcleardoublepage#1{\clearpage\if@twoside\ifodd\c@page\else
 \hbox{}\thispagestyle{#1}\newpage\if@twocolumn\hbox{}\thispagestyle{#1}\newpage\fi\fi\fi}
 
+\def\@mktht{}
+\def\mktht#1{\gdef\@mktht{#1}}
 
 % user command to invoke the title page
 \def\maketitle{\par%
@@ -3376,9 +3402,14 @@ between column types.}%
 %%            \twocolumn[\@maketitle\@IEEEdynamictitlevspace\@IEEEaftertitletext]%
 %%         \fi
 %%     \else
-        \newpage\global\@topnum\z@ \twocolumn[\@maketitle]%%\@IEEEstatictitlevskip\@IEEEaftertitletext%
+        \newpage%
+        \global\@topnum\z@ \twocolumn[\@maketitle]%%\@IEEEstatictitlevskip\@IEEEaftertitletext%
 %%     \fi
-     \thispagestyle{plain}%{IEEEtitlepagestyle}\@thanks%
+     \thanks{\parindent0pt%
+            \hspace*{-8pt}XXXX-XXX \copyright\ \@pubyear\ IEEE\endgraf
+            Digital Object Identifier 10.1109/XXX.0000.0000000
+           }
+     \thispagestyle{plain}\@thanks%{IEEEtitlepagestyle}\@thanks%
 %%  \fi
   % pullup page for pubid if used.
 %%   \if@IEEEusingpubid
@@ -3396,12 +3427,12 @@ between column types.}%
 % V1.7 parbox to format \@IEEEcompsoctitleabstractindextext
 \long\def\@IEEEcompsoctitleabstractindextextbox#1{\parbox{0.915\textwidth}{#1}}
 %%%%%%%%%%%%%%%%%%% TB Maketitle %%%%%%%%%%
-\def\affilfont{\reset@font\fontfamily{\sfdefault}\fontsize{9.5}{12}\selectfont\ifodd\c@page\else\leftskip-60pt\fi\rightskip0pc plus1fill}
-\def\affil#1{{\par\affilfont#1\par\vskip6pt}}
+\def\affilfont{\reset@font\fontfamily{\sfdefault}\fontsize{9}{11}\selectfont\itshape\rightskip0pc plus1fill}
+\def\affil#1{{\affilfont#1}}
 \affil{}%%
 \def\editorfont{\fontfamily{\sfdefault}\fontsize{12}{14}\selectfont\leftskip0pc\rightskip0pc plus1fill}
-\def\sptitlefont{\fontfamily{\sfdefault}\fontsize{16}{18}\selectfont\leftskip0pc\rightskip0pc plus1fill}
-\def\titlefont{\fontfamily{\sfdefault}\fontsize{32}{34}\selectfont\ifodd\c@page\else\leftskip-60pt\fi\rightskip0pc plus1fill}
+\def\sptitlefont{\fontfamily{\sfdefault}\fontsize{14}{16}\selectfont\leftskip0pc\rightskip0pc plus1fill}
+\def\titlefont{\fontfamily{\sfdefault}\fontsize{20}{24}\selectfont\bfseries\rightskip0pc plus1fill}
 %%\def\affiliation#1{\par\vskip12pt{\affilfont#1}\par}%
 \def\doi@font{\fontsize{6}{7}\selectfont\normalfont\centering}
 \def\doiinfo#1{\gdef\@doiinfo{#1}\par}%
@@ -3410,19 +3441,19 @@ between column types.}%
 \def\editor#1{\gdef\@editor{#1}}\editor{}
 \newbox\tempbox
 %%%%%%%%%%%%%%%%%%
-\def\@maketitle{\newpage
-  \bgroup%
-    \vspace*{3pt}%
-     \ifx\@sptitle\@empty\else\ifodd\c@page\else\hspace*{-60pt}\fi\fbox{\setbox0\hbox{\sptitlefont\@sptitle}%
-      \setbox\tempbox\hbox{\editorfont\@editor}%       
-      \vbox{\ifdim\wd0>\wd\tempbox\hsize\wd0\else\hsize\wd\tempbox\fi%
-           \sptitlefont\@sptitle\ifx\@editor\@empty\else\par{\editorfont\@editor\par}\fi}}\par\vskip44pt\fi%
-     {\titlefont{\@title}\par\vskip36pt}%
+\def\@maketitle{\newpage%
+\setbox0\vbox{\bgroup%
+     \ifx\@sptitle\@empty\else{\sptitlefont\textcolor{dyellowcolor}{\@sptitle}\par}\vskip25pt\fi%
+     {\titlefont{\@title}\par\vskip10pt}%
     {\@author}\vskip37pt%
+    \egroup}%
+    \immediate\write\@auxout{\string\mktht{\the\ht0}}%
+    \bgroup%
+    \vspace*{-63.75pt}%
+     \ifx\@sptitle\@empty\else{\sptitlefont\textcolor{dyellowcolor}{\@sptitle}\par}\vskip25pt\fi%
+     {\titlefont{\textcolor{white}{\@title}}\par\vskip10pt}%
+    {\textcolor{white}{\@author}}\vskip30.75pt%
     \ifvoid\abstractbox\else{\reset@font\box\abstractbox}\fi\par\vskip0.5pt%
-    %\hbox to \textwidth{\hspace*{5pc}\title@green{\vrule width23pc height10pt depth0pt}}%
-    %% {\par\vspace{13pt}\@affil\par}%
-    %% {\par\vspace{15pt}\@doiinfo\vspace*{36pt}\par}
     \par\addvspace{3\baselineskip}\egroup%
     \let\maketitle\relax
 }%
@@ -3663,7 +3694,7 @@ between column types.}%
 % V1.6 have abstract and keywords strip leading spaces, pars and newlines
 % so that spacing is more tightly controlled.
 \newbox\abstractbox
-\def\abstract{\global\setbox\abstractbox\vbox\bgroup\parindent0pt\hsize437pt\abstractfont{\itshape Abstract}---\unskip\unskip\unskip\ignorespaces}
+\def\abstract{\global\setbox\abstractbox\vbox\bgroup\parindent0pt\hsize385pt\abstractfont{\itshape Abstract}---\unskip\unskip\unskip\ignorespaces}
 % V1.6 IEEE wants only 1 pica from end of abstract to introduction heading when in 
 % conference mode (the heading already has this much above it)
 \def\endabstract{\relax\ifCLASSOPTIONconference\vspace{0ex}\else\vspace{1.34ex}\fi\par\if@twocolumn\else\endquotation\fi
@@ -3784,13 +3815,14 @@ between column types.}%
   \fi%
   \@tempskipa #5\relax
   \ifdim \@tempskipa>\z@% tempskipa determines whether is treated as a high
-     \begingroup #6{\relax% or low level heading
+   \ifnum #2=\@ne\noindent\fboxsep3pt\colorbox{syellowcolor}{\vbox{\hsize212.25pt\fi%  
+   \begingroup #6{\relax% or low level heading
       \noindent % subsections are NOT indented
        % print top level headings. \@svsec is label, #8 is heading title
        % IEEE does not block indent the section title text, it flows like normal
-            {\hskip #3\relax{\@svsec}}{\interlinepenalty \@M {#8}\@@par}%
+            {\hskip #3\relax{\@svsec}}{\interlinepenalty \@M \ifnum #2=\@ne\textcolor{white}{#8}\else{#8}\fi\@@par}%
      }%
-     \endgroup
+     \endgroup\ifnum #2=\@ne}}\fi%
      \addcontentsline{toc}{#1}{\ifnum #2>\c@secnumdepth\relax\else
                \protect\numberline{\csname the#1\endcsname}\fi#7}%
   \else % printout low level headings
@@ -3862,8 +3894,8 @@ between column types.}%
 %% \def\subsection{\@startsection{subsection}{2}{\z@}{1.5ex plus 1.5ex minus 0.5ex}%
 %% {0.7ex plus .5ex minus 0ex}{\normalfont\normalsize\itshape}}%
 %% \else % for journals
- \def\section{\@startsection{section}{1}{\z@}{14pt \@plus 2pt \@minus 2pt}{0.0001pt}{\sectionfont}}%
- \def\subsection{\@startsection{subsection}{2}{\z@}{13pt \@plus 2pt \@minus 2pt}{0.0001pt}{\subsectionfont}}%
+ \def\section{\@startsection{section}{1}{\z@}{-22pt \@plus -2pt \@minus -2pt}{1pt}{\sectionfont}}%
+ \def\subsection{\@startsection{subsection}{2}{\z@}{-17pt \@plus -2pt \@minus -2pt}{0.0001pt}{\subsectionfont}}%
 %%\fi%
 
 % for both journals and conferences
@@ -4680,27 +4712,30 @@ Use \@IEEEbackslash #2 instead.}}
 %
 \def\jname#1{\gdef\@jname{#1}}\jname{}
 %
+\def\jtitle#1{\gdef\@jtitle{#1}}\jtitle{}
+%
 \def\jmonth#1{\gdef\@jmonth{{#1}}}\jmonth{}
 %
 \def\pubyear#1{\gdef\@pubyear{#1}}\pubyear{}
 %
-\def\authorfont{\fontfamily{\rmdefault}\fontsize{10.5}{12}\selectfont\bfseries\ifodd\c@page\else\leftskip-60pt\fi\rightskip0pc plus1fill}
+\def\authorfont{\fontfamily{\rmdefault}\fontsize{9}{16}\selectfont\rightskip0pc plus1fill}
 \def\rfoot{\rule{\textwidth}{10pt}\par}%
-\def\rhfont{\fontfamily{\sfdefault}\fontsize{11}{11}\selectfont}%
-\def\foliofont{\fontfamily{\sfdefault}\fontsize{16}{16}\selectfont}%
+\def\rhfont{\fontfamily{\sfdefault}\fontsize{10}{10}\selectfont\bfseries}%
+\def\foliofont{\fontfamily{\sfdefault}\fontsize{9}{9}\selectfont\bfseries}%
 \def\rffont{\fontfamily{\sfdefault}\fontsize{6}{6}\selectfont}%
 \def\rfxfont{\fontfamily{\sfdefault}\fontsize{7}{7}\selectfont}%
-\def\bibliofont{\fontfamily{\sfdefault}\fontsize{8}{13}\selectfont}%
+\def\bibliofont{\fontfamily{\sfdefault}\fontsize{8}{12}\selectfont}%
 %
-\def\tablecapfont{\fontfamily{\rmdefault}\fontsize{8.5}{10}\selectfont\bfseries}
-\def\tablecapnumfont{\fontfamily{\rmdefault}\fontsize{8.5}{10}\selectfont\bfseries}
-\def\figcapfont{\fontfamily{\sfdefault}\fontsize{9}{13}\selectfont}
-\def\figcapnumfont{\fontfamily{\sfdefault}\fontsize{9}{10}\selectfont\bfseries}
-\def\abstractfont{\fontfamily{\sfdefault}\fontsize{9.5}{13.5}\selectfont\bfseries\leftskip0pc\rightskip0pc plus1fill}
-\def\sectionfont{\fontfamily{\sfdefault}\fontsize{12}{12}\selectfont\raggedright}
-\def\bibsectionfont{\fontfamily{\sfdefault}\fontsize{11}{13}\selectfont\raggedright}
-\def\subsectionfont{\fontfamily{\sfdefault}\fontsize{10}{13}\selectfont\raggedright}
-\def\subsubsectionfont{\fontfamily{\sfdefault}\fontsize{10.5}{13}\selectfont\bfseries\raggedright}
+\def\tablefont{\fontfamily{\sfdefault}\fontsize{9}{10}\selectfont}
+\def\tablecapfont{\fontfamily{\rmdefault}\fontsize{8}{12}\selectfont}
+\def\tablecapnumfont{\fontfamily{\rmdefault}\fontsize{8}{12}\selectfont\bfseries}
+\def\figcapfont{\fontfamily{\sfdefault}\fontsize{8}{12}\selectfont}
+\def\figcapnumfont{\fontfamily{\sfdefault}\fontsize{8}{12}\selectfont\bfseries}
+\def\abstractfont{\fontfamily{\sfdefault}\fontsize{10}{14}\selectfont\itshape\leftskip16.5pt\rightskip0pc plus1fill}
+\def\sectionfont{\fontfamily{\sfdefault}\fontsize{12}{14}\selectfont\bfseries\raggedright}
+\def\bibsectionfont{\fontfamily{\sfdefault}\fontsize{12}{14}\selectfont\bfseries\raggedright}
+\def\subsectionfont{\fontfamily{\sfdefault}\fontsize{11}{13}\selectfont\raggedright}
+\def\subsubsectionfont{\fontfamily{\sfdefault}\fontsize{9}{12}\selectfont\itshape\raggedright}
 %
 \newdimen\footheight
 \footheight\z@
@@ -4714,19 +4749,19 @@ Use \@IEEEbackslash #2 instead.}}
 \global\setlength\paperwidth{8.5in}
 \global\setlength\paperheight{11in}
 
-\newdimen\typeheight\typeheight60.5pc%
-\newdimen\typewidth\typewidth526pt%44pc%
+\newdimen\typeheight\typeheight59.5pc%
+\newdimen\typewidth\typewidth454pt%44pc%
 \newlength\extramargin
 \setlength\extramargin{60pt}
-\global\setlength\textheight{53.5pc}
-\global\setlength\textwidth{437pt}
+\global\setlength\textheight{52.5pc}
+\global\setlength\textwidth{454pt}
 
-\global\topmargin30pt
-\oddsidemargin50.5pt%3.6pc
-\evensidemargin50.5pt
+\global\topmargin50pt
+\oddsidemargin71pt%3.6pc
+\evensidemargin71pt
 
 \setlength\headheight{0\p@}% 
-\setlength\headsep   {36pt}% \typeheight - \textheight - \headheight
+\setlength\headsep   {58.5pt}% \typeheight - \textheight - \headheight
 \setlength\topskip   {0\p@}
 \setlength\splittopskip   {\topskip}
 \addtolength\textheight{4pt}
@@ -4799,16 +4834,16 @@ Use \@IEEEbackslash #2 instead.}}
   \noalign{\ifnum0=`}\fi\hrule \@height.5pt\futurelet%
    \@tempa\@xhline}
 %%
-\def\colrule{\\[-5.9pt]\Hline\\[-6pt]}
-\def\toprule{\\[-10pt]\HHline\\[-6pt]}
-\def\botrule{\\\\[-4pt]\HHline}
+\def\colrule{\\[-8.5pt]\Hline\\[-6pt]}
+\def\toprule{\\[-8pt]\Hline\\[-6pt]}
+\def\botrule{\\[-7pt]\Hline\\[-5pt]}
 %%
 \let\IEEEbiography\IEEEbiographynophoto
 \let\endIEEEbiography\endIEEEbiographynophoto
 %%
-\parindent15pt%%
+\parindent14pt%%
 %%
-\def\@outputpage{%
+\def\@outputpageaa{%
 \begingroup           % the \endgroup is put in by \aftergroup
   \let \protect \noexpand
   \@resetactivechars
@@ -4867,8 +4902,8 @@ Use \@IEEEbackslash #2 instead.}}
 }
 %%
 \newif\ifCUPmtlplainloaded
-%% \usepackage[fleqn]{amsmath}
-%% \@mathmargin=1sp
+\usepackage{amsmath}
+\@mathmargin=1sp
 \newcount\authorcount
 \newcount\tempcount
 \long\def\author#1{\global\advance\authorcount\@ne\expandafter\gdef\csname author\romannumeral\the\authorcount\endcsname{#1}}
@@ -4880,7 +4915,7 @@ Use \@IEEEbackslash #2 instead.}}
    \ifnum\authorcount>\z@
    \advance\tempcount\@ne
       \bgroup
-         {\authorfont\csname author\romannumeral\the\tempcount\endcsname\par}
+         {\authorfont\csname author\romannumeral\the\tempcount\endcsname,\space}
          {\affilfont\csname affil\romannumeral\the\tempcount\endcsname\par}\vskip6pt%
      \egroup
     \advance\authorcount\m@ne
@@ -4888,8 +4923,20 @@ Use \@IEEEbackslash #2 instead.}}
 \fi%
 }
 %%
-\def\chapterinitial#1{\noindent{\vrule width9pt height9pt depth0pt}\ {\sffamily\bfseries\scshape #1}}
-\usepackage{wrapfig,array}
+%\def\chapterinitial#1{\noindent{\vrule width9pt height9pt depth0pt}\ {\sffamily\bfseries\scshape #1}}
+%%%
+\def\chapterinitialfont{\reset@font\fontfamily{\sfdefault}\fontsize{45}{45}\selectfont}
+%
+\newbox\NTempbox
+\newdimen\NTempdimen\NTempdimen\z@
+
+\def\chapteri#1{\setbox\NTempbox\hbox{\chapterinitialfont#1}%
+    \advance\NTempdimen\wd\NTempbox%
+    \advance\NTempdimen2.5pt%
+    \hangindent\NTempdimen\hangafter-3%
+    \noindent\llap{$\smash{\lower24pt\hbox{\chapterinitialfont\textcolor{bgcolor}{#1}}}$\hskip2.5pt}\NTempdimen\z@}
+%%%
+\usepackage{array}
 \newbox\quotebox
 \newskip\quoteskp
 \newskip\sdquoteskp
@@ -4908,7 +4955,22 @@ Use \@IEEEbackslash #2 instead.}}
 \if!#1!\def\@temp{r}\else\def\@temp{#1}\fi
 \begin{wrapfigure}[\the\quotecnt]{\@temp}[0pt]{9.5pc}\vskip-.25\baselineskip\box0\end{wrapfigure}}
 %%
+\definecolor{bgcolor}{rgb}{0,0.42,0.64}
+\definecolor{dyellowcolor}{rgb}{0.98,0.70,0.29}
+\definecolor{syellowcolor}{rgb}{0.98,0.64,0.098}
+\definecolor{gray40}{gray}{0.60}
+%%
+\def\extractfont{\fontsize{10}{13}\selectfont\itshape\leftskip15pt\rightskip15pt plus1fill}
+\renewenvironment{quote}{\par\parindent0pt\addvspace{1.0em plus 1pt}\textcolor{syellowcolor}{\vrule width\columnwidth height1pt depth0pt}\par\vspace*{6pt}\textcolor{gray40}\bgroup\extractfont}{\par\special{color pop}\egroup\textcolor{syellowcolor}{\vrule width\columnwidth height1pt depth0pt}\par\addvspace{1.0em plus 1pt}}
+%%
+\def\FloatSep{\textcolor{syellowcolor}{\vrule width\hsize height1pt depth0pt}\par\vskip6pt}
+%%
+\usepackage[T1]{fontenc}
+\let\oldguilsinglright\guilsinglright
+\newcommand{\ieeeguilsinglright}{\textcolor{bgcolor}{\bf\guilsinglright}}
+%%
 \endinput
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% End of IEEEphot.cls  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % That's all folks!

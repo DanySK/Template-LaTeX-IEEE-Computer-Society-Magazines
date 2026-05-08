@@ -12,3 +12,4 @@ latex.pdf
 *.kate-swp
 CsMag_template.pdf
 build/
+out/
